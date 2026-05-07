@@ -435,6 +435,79 @@ button { font: inherit; border: 0; background: 0; cursor: pointer; color: inheri
   border-radius: 50%;
   background: var(--gold);
 }
+.price-list {
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 1.2rem 0 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.price-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  color: var(--char);
+}
+.price-list li > span:first-child {
+  color: var(--char-mist);
+}
+.price-list li > span:last-child {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--moss-deep);
+  font-weight: 500;
+  white-space: nowrap;
+}
+/* feature card price list — invert the contrast */
+.service-card--feature .price-list { border-top-color: rgba(250,246,239,.18); }
+.service-card--feature .price-list li > span:first-child { color: rgba(250,246,239,.78); }
+.service-card--feature .price-list li > span:last-child { color: var(--gold-glow); }
+.service-card--correction .price-list { border-top-color: var(--blush); }
+.service-card--correction .price-list li > span:last-child { color: var(--blush-deep); }
+
+/* ============ EXTRAS STRIP ============ */
+.extras-strip {
+  max-width: var(--max);
+  margin: 3rem auto 0;
+  padding: 2rem var(--gutter) 0;
+  border-top: 1px dashed var(--line);
+}
+.extras-kicker {
+  font-family: var(--script);
+  font-size: 1.6rem;
+  color: var(--blush-deep);
+  margin: 0 0 1rem;
+  transform: rotate(-1deg);
+  display: inline-block;
+}
+.extras-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.4rem 1.5rem;
+}
+.extras-list li {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--char-mist);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.extras-list li > span:last-child {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--moss);
+  font-weight: 500;
+}
 .service-card--feature {
   background: var(--moss);
   color: var(--cream);
