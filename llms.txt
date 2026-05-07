@@ -23,8 +23,8 @@ Hair by Abi is a one-chair salon serving Ponchatoula, Hammond, Amite, and the su
 Bookings are managed through Square Appointments at the salon's booking link. Deposits, where required, are collected at checkout.
 
 ## Site Map
-- [Services](https://hairbyabi.com/#services)
-- [Gallery](https://hairbyabi.com/#gallery)
-- [About Abi](https://hairbyabi.com/#about)
-- [FAQ](https://hairbyabi.com/#faq)
-- [Visit & Book](https://hairbyabi.com/#visit)
+- [Services](https://archofmac-png.github.io/hair-by-abi/#services)
+- [Gallery](https://archofmac-png.github.io/hair-by-abi/#gallery)
+- [About Abi](https://archofmac-png.github.io/hair-by-abi/#about)
+- [FAQ](https://archofmac-png.github.io/hair-by-abi/#faq)
+- [Visit & Book](https://archofmac-png.github.io/hair-by-abi/#visit)
