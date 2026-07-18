@@ -638,9 +638,12 @@ button { font: inherit; border: 0; background: 0; cursor: pointer; color: inheri
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 220px;
+  /* 11 photos = 15 cells; the last item widens at 4-col and 2-col (16 cells)
+     so every row fills; 3-col keeps 15 (divisible) — see media overrides */
   grid-auto-flow: dense;
   gap: 1rem;
 }
+.gallery-grid .g:last-child { grid-column: span 2; }
 .g {
   position: relative;
   margin: 0;
@@ -978,6 +981,7 @@ button { font: inherit; border: 0; background: 0; cursor: pointer; color: inheri
 /* ============ RESPONSIVE ============ */
 @media (max-width: 1024px) {
   .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .gallery-grid .g:last-child { grid-column: auto; }
   .bridal { grid-template-columns: 1fr; }
   .bridal-image { justify-self: center; }
   .about { grid-template-columns: 1fr; }
@@ -994,6 +998,7 @@ button { font: inherit; border: 0; background: 0; cursor: pointer; color: inheri
   }
   .g--wide { grid-column: span 2; }
   .g--tall { grid-row: span 2; }
+  .gallery-grid .g:last-child { grid-column: span 2; }
   .visit-info { grid-template-columns: 1fr; gap: 0.6rem 0; }
   .visit-info dt { padding-top: 1rem; }
   .mobile-book-cta { display: block; }

@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
     document.querySelectorAll('.primary-nav a').forEach(a =>
-      a.addEventListener('click', () => header.classList.remove('menu-open'))
+      a.addEventListener('click', () => {
+        header.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      })
     );
   }
 
