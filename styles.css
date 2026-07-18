@@ -15,6 +15,8 @@
   --blush-deep:  #d3917f;     /* hover/accent pink */
   --gold:        #c8a26a;     /* warm gold accent */
   --gold-glow:   #e3c391;     /* soft gold for hover */
+  --gold-ink:    #826536;     /* gold for text on light bg (AA) */
+  --blush-ink:   #96543c;     /* blush for text on light bg (AA) */
   --char:        #2a2520;     /* warm body text */
   --char-mist:   #5b5247;     /* secondary text */
   --line:        #d8cfbe;     /* hairline / divider */
@@ -71,7 +73,7 @@ button { font: inherit; border: 0; background: 0; cursor: pointer; color: inheri
   letter-spacing: 0.22em;
   font-size: 0.74rem;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--gold-ink);
   margin: 0 0 1rem;
 }
 .script-accent,
@@ -325,7 +327,7 @@ button { font: inherit; border: 0; background: 0; cursor: pointer; color: inheri
 }
 .welcome .script-accent {
   font-size: clamp(2rem, 4vw, 2.8rem);
-  color: var(--blush-deep);
+  color: var(--blush-ink);
   margin: 0 0 1rem;
   display: inline-block;
   transform: rotate(-2deg);
@@ -408,7 +410,7 @@ button { font: inherit; border: 0; background: 0; cursor: pointer; color: inheri
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.6rem;
-  color: var(--gold);
+  color: var(--gold-ink);
   margin: 0 0 0.6rem;
   font-weight: 500;
 }
@@ -468,7 +470,7 @@ button { font: inherit; border: 0; background: 0; cursor: pointer; color: inheri
 .service-card--feature .price-list li > span:first-child { color: rgba(250,246,239,.78); }
 .service-card--feature .price-list li > span:last-child { color: var(--gold-glow); }
 .service-card--correction .price-list { border-top-color: var(--blush); }
-.service-card--correction .price-list li > span:last-child { color: var(--blush-deep); }
+.service-card--correction .price-list li > span:last-child { color: var(--blush-ink); }
 
 /* ============ EXTRAS STRIP ============ */
 .extras-strip {
@@ -480,7 +482,7 @@ button { font: inherit; border: 0; background: 0; cursor: pointer; color: inheri
 .extras-kicker {
   font-family: var(--script);
   font-size: 1.6rem;
-  color: var(--blush-deep);
+  color: var(--blush-ink);
   margin: 0 0 1rem;
   transform: rotate(-1deg);
   display: inline-block;
@@ -518,7 +520,7 @@ button { font: inherit; border: 0; background: 0; cursor: pointer; color: inheri
 .service-card--feature .service-num { color: var(--gold-glow); }
 .service-card--feature .service-meta { color: var(--gold-glow); }
 .service-card--correction { border-color: var(--blush); }
-.service-card--correction .service-num { color: var(--blush-deep); }
+.service-card--correction .service-num { color: var(--blush-ink); }
 
 /* ============ TRANSFORMATION ============ */
 .transformation {
@@ -1044,4 +1046,35 @@ button { font: inherit; border: 0; background: 0; cursor: pointer; color: inheri
 .site-header.menu-open .menu-toggle span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
   background: var(--char);
+}
+
+/* ============ QA fixes ============ */
+.nowrap { white-space: nowrap; }
+
+/* anchor targets clear the fixed header */
+[id] { scroll-margin-top: 92px; }
+
+/* sticky mobile CTA stays hidden until the hero (with its own Book button) scrolls away */
+.mobile-book-cta {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(90px);
+  transition: opacity .35s var(--ease), transform .35s var(--ease);
+}
+body.show-mobile-cta .mobile-book-cta {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+/* Book link lives only in the mobile overlay menu */
+.primary-nav .nav-book { display: none; }
+.site-header.menu-open .primary-nav .nav-book { display: inline; }
+
+/* in-prose links should look clickable */
+.section-sub a,
+.visit-info dd a:not(.placeholder) {
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 3px;
 }
