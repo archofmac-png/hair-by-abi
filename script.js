@@ -27,13 +27,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const beforeWrap = slider.querySelector('.ba-before-wrap');
     const handle = slider.querySelector('.ba-handle');
     let dragging = false;
+    let pos = 50;
+
+    const apply = () => {
+      beforeWrap.style.clipPath = 'inset(0 ' + (100 - pos) + '% 0 0)';
+      handle.style.left = pos + '%';
+    };
 
     const setPos = (clientX) => {
       const rect = slider.getBoundingClientRect();
-      let pct = ((clientX - rect.left) / rect.width) * 100;
-      pct = Math.max(0, Math.min(100, pct));
-      beforeWrap.style.width = pct + '%';
-      handle.style.left = pct + '%';
+      pos = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+      apply();
     };
 
     const start = (e) => {
@@ -60,10 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
     handle.addEventListener('keydown', (e) => {
       if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
       e.preventDefault();
-      const current = parseFloat(beforeWrap.style.width) || 50;
-      const next = Math.max(0, Math.min(100, current + (e.key === 'ArrowRight' ? 5 : -5)));
-      beforeWrap.style.width = next + '%';
-      handle.style.left = next + '%';
+      pos = Math.max(0, Math.min(100, pos + (e.key === 'ArrowRight' ? 5 : -5)));
+      apply();
     });
 
     // hover preview: on desktop, follow cursor without click

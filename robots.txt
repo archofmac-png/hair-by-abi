@@ -11,4 +11,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://archofmac-png.github.io/hair-by-abi/sitemap.xml
+Sitemap: https://hairbyabi.net/sitemap.xml

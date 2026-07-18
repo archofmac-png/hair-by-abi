@@ -31,8 +31,8 @@ Appointment only, booked through Square Appointments: https://squareup.com/appoi
 No cancellation fee. Deposits, where required, are shown and collected at booking.
 
 ## Site Map
-- [Services](https://archofmac-png.github.io/hair-by-abi/#services)
-- [Gallery](https://archofmac-png.github.io/hair-by-abi/#gallery)
-- [About Abi](https://archofmac-png.github.io/hair-by-abi/#about)
-- [FAQ](https://archofmac-png.github.io/hair-by-abi/#faq)
-- [Visit & Book](https://archofmac-png.github.io/hair-by-abi/#visit)
+- [Services](https://hairbyabi.net/#services)
+- [Gallery](https://hairbyabi.net/#gallery)
+- [About Abi](https://hairbyabi.net/#about)
+- [FAQ](https://hairbyabi.net/#faq)
+- [Visit & Book](https://hairbyabi.net/#visit)

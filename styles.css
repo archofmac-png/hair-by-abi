@@ -563,13 +563,10 @@ button { font: inherit; border: 0; background: 0; cursor: pointer; color: inheri
 }
 .ba-before-wrap {
   position: absolute; inset: 0;
-  width: 50%;
   overflow: hidden;
   pointer-events: none;
-}
-.ba-before-wrap .ba-before {
-  width: 200%;
-  max-width: none;
+  /* full-size layer; the reveal is a clip, so the photo never rescales */
+  clip-path: inset(0 50% 0 0);
 }
 .ba-handle {
   position: absolute;
