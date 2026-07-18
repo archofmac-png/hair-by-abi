@@ -999,7 +999,7 @@ button { font: inherit; border: 0; background: 0; cursor: pointer; color: inheri
   .mobile-book-cta { display: block; }
   body { padding-bottom: 5rem; }
   .ba-slider { aspect-ratio: 3/4; }
-  .bridal-image--inset { width: 50%; bottom: -1rem; left: -1rem; }
+  .bridal-image > img.bridal-image--inset { width: 50%; bottom: -1rem; left: -1rem; }
 }
 
 /* ============ SCROLL REVEAL ============ */
